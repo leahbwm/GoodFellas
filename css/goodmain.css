@@ -12,6 +12,7 @@ Body {
 .half-width {
     width: 700px;
     float: left;
+    margin: auto;
 }
 
 /***Header Styles***/
@@ -38,7 +39,7 @@ Body {
 }
 /***Body Styles***/
 #services {
-    height: 1200px;
+    height: 600px;
     background-color: blanchedalmond;
 }
 #services1 {
@@ -72,4 +73,9 @@ Body {
 #upholstery {
     text-align: center;
     height: 600px;
+}
+#contact {
+    text-align: center;
+    width: 1000px;
+    font-size:24px;
 }
