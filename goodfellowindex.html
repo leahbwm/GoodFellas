@@ -5,33 +5,24 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/goodmain.css">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Carter+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:500" rel="stylesheet">
+
 </head>
 <body>
-    <section id="header" class="full-width">
+    <section class="header">
         <div id="logo" class="half-width">
             <img src="img/goodfellaslogo.png" alt="logo" />
         </div>
-        <div class="half-width">
-                <nav>
-                    <ul>
-                        <li>Services</li>
-                        <li>Contact</li>
-                    </ul>
-                </nav>
+        <div>
             <h1>Call today for your FREE estimate!<br><span>555-555-5555</span></h1>
         </div>
     </section>
-    <section id="services" class="full-width">
-        <div id="wood" class="half-width">
-            <img src="img/hardwood.jpg" alt="hardwood floor" />
-        </div>
-        <div id="services1" class="half-width">
+    <section class="services">
+        <div id="services1">
             <h3>Is your home in desperate need of a cleaning?</h3>
             <p>Perhaps your carpets are old and worn out, and you are hoping to restore them to their former glory. If you live in the Tucson area, you can trust <span>Goodfellas Carpet Cleaning</span> for all of your residential cleaning needs. Along with carpet cleaning, we offer a wide variety of services, including upholstery cleaning, hardwood floor cleaning, tile and grout cleaning and mattress cleaning. We take great pride in providing friendly customer service to each and every customer. We love to get to know each client personally and build strong relationships.</p>
-        </div>
-    </section>
-    <section id="services" class="full-width">    
-        <div class="half-width" id="services2">
+            <br>
             <p>There are many great reasons to choose us for all of your home cleaning needs. We use an innovative cleaning process that ensures a comprehensive deep clean. The experienced trained technicians at Goodfellas are the best in the business at what they do. We are proud to have an excellent staff that is fully committed to each client. The superior equipment and safe cleaning products that we use are guaranteed to provide top notch cleaning and restoration services. No harmful chemicals will ever be utilized in your home. The products we use are safe for the environment.
                 </p>
             <p>Our services include:</p>
@@ -43,13 +34,85 @@
                 <li>hardwood floor cleaning</li>
             </ul>
         </div>
-        <div class="half-width" id="upholstery">
-            <img src="img/upholstery.jpg" alt="upholstery" />
-        </div>
     </section>
-    <section id="contact" class="full-width">
-        <p>Goodfellas Carpet Cleaning is your one stop shop for all residential cleaning needs. We can be reached by calling 555-555-5555. Representatives are standing by. We are happy to give you a free estimate. Our excellent customer service is reflected in the fact that we are always there for you. Call us today for more information!
-            </p>
+        <!-- Slideshow container -->
+<div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img src="img/tle.jpg" style="width:100%">
+          <div class="text">TILE CLEANING</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img src="img/hardwood.jpg" style="width:100%">
+          <div class="text">HARDWOOD CLEANING</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img src="img/upholstery.jpg" style="width:100%">
+          <div class="text">UPHOLSTERY CLEANING</div>
+        </div>
+
+        <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="img/mattress.jpg" style="width:100%">
+                <div class="text">MATTRESS CLEANING</div>
+              </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span> 
+      </div>
+      <script>
+      var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1} 
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none"; 
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block"; 
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+    </section>
+    <section class="full-width">
+        <div class="contact">   
+            <h3>Goodfellas Carpet Cleaning is your one stop shop for all residential cleaning needs.<br>We can be reached by calling <span>555-555-5555</span>. Representatives are standing by.<br>We are happy to give you a free estimate. Our excellent customer service is reflected in the fact that we are always there for you.
+            </h3>
+            <h2>Call us today for more information!</h2>
+        </div>
     </section>
 </body>
 </html>
